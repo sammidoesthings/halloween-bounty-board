@@ -5,10 +5,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+       <h1>Monster Hunter Job Board</h1>
+       
+        <div className="job-listings">
+          INSERT SEVERAL MONSTER CARDS HERE
+        </div>
+
+        <div className="sightings-app">
+          HAVE YOU SEEN A MONSTER?
+          Submission Form
+        </div>
+
+        <div className="sightings-posted">
+          MAKE SIGHTINGS SHOW UP HERE WHEN SUBMITTED
+        </div>
+
         <a
           className="App-link"
           href="https://reactjs.org"
