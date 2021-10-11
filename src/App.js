@@ -1,6 +1,6 @@
 import './App.css';
 import { monsters, topBounties} from './components/monsters';
-import { Photo, Card, BountyCard, BountyPhoto } from './styles'
+import { Photo, Card, BountyCard, BountyPhoto, TopBountyTitle, SubTitle } from './styles'
 
 
 let monsterCards = monsters.map((monster) => {
@@ -26,10 +26,13 @@ let topBountyCards = topBounties.map((bounty) => {
   return (
     <div className="masterDiv">
       <BountyCard>
-      <BountyPhoto src={`${bounty.image}`} alt="bounty profile"/>
-        {bounty.name}
-        {bounty.bounty}
-        {bounty.weakness}
+        <div>
+          <BountyPhoto src={`${bounty.image}`} alt="bounty profile"/>
+        </div>
+        <div className="bounty-info">
+          <h2>{bounty.bounty} | {bounty.name}</h2>
+          <p>{bounty.info}</p>
+        </div>
       </BountyCard>
     </div>
   )
@@ -38,9 +41,7 @@ let topBountyCards = topBounties.map((bounty) => {
 
 function App() {
 
-
 //useEffect + useState would be here
-
 
   return (
     <div className="App">
@@ -53,15 +54,14 @@ function App() {
         </div>
 
         <div className="sightings-container">
-          <div className="sightings-app">
-            <h2>TOP BOUNTY!</h2>
-            <p>HAVE YOU SEEN THESE MONSTERS?</p>
+          <div className="top-bounty">
+            <TopBountyTitle>TOP BOUNTY!</TopBountyTitle>
+            <SubTitle>HAVE YOU SEEN THIS MONSTER?</SubTitle>
             {topBountyCards}
-            <p>Submission Form</p>
           </div>
 
-          <div className="sightings-posted">
-            MAKE SIGHTINGS SHOW UP HERE WHEN SUBMITTED
+          <div className="sightings">
+          <button>Submit a Sighting</button>
           </div>
         </div>
       </section>

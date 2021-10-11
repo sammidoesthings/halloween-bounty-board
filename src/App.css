@@ -1,26 +1,29 @@
 /* APP CSS */
 
 h1 {
-    border: red solid 3px;
+    /* border: red solid 3px; */
     font-family: 'ZCOOL KuaiLe', sans-serif;
     font-size: 7rem;
     margin-top: 0.5rem;
     margin-bottom: 0.75rem;
+    color: #1a0d00;
+    text-shadow: 4px 4px #4d2600;
 }
 
 body {
     font-family: 'Architects Daughter', sans-serif;
     letter-spacing: 0.05rem;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/193/057/small/wood-texture-background-free-vector.jpg");
 }
 
 .section {
-    border: orange solid 3px;
+    /* border: orange solid 3px; */
     display: flex;
     justify-content: space-evenly;
 }
 
 .job-listings, .sightings-container {
-    border: green solid 3px;
+    /* border: green solid 3px; */
     width: 48%;
     display: flex;
     align-content: center;
@@ -31,15 +34,24 @@ body {
     display: flex;
 }
 
-.sightings-app, .sightings-posted {
-    border: purple solid 3px;
+.top-bounty, .sightings {
+    /* border: purple solid 3px; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-wrap: column;
     width: 100%;
 }
 
-/* .sightings-app {
-    width: 100%;
-} */
+.bounty-info {
+    padding: 0.5rem;
+}
+
+.bounty-info h2 {
+    text-align: center;
+}
+
+.sightings {
+    height: 4rem;
+}
