@@ -13,16 +13,13 @@ let monsterCards = monsters.map((monster) => {
       </div>
 
       <div>
-        {monster.name}
+        {monster.name} | {monster.bounty}
       </div>
     
-      <div>
-        {monster.type}
-      </div>
+      {/* <div>
+        {monster.type}. {monster.weakness}
+      </div> */}
 
-      <div>
-        {monster.bounty}
-      </div>
     </Card>
   </div> /*master Div*/
   )
@@ -39,20 +36,24 @@ function App() {
     <div className="App">
 
        <h1>Monster Hunter Job Board</h1>
-       
+
+      <section className="section">
         <div className="job-listings">
-          {monsterCards}
+            {monsterCards}
         </div>
 
-        <div className="sightings-app">
-          HAVE YOU SEEN A MONSTER?
-          Submission Form
-        </div>
+        <div className="sightings-container">
+          <div className="sightings-app">
+            <h2>TOP BOUNTY!</h2>
+            <p>HAVE YOU SEEN THIS MONSTER?</p>
+            <p>Submission Form</p>
+          </div>
 
-        <div className="sightings-posted">
-          MAKE SIGHTINGS SHOW UP HERE WHEN SUBMITTED
+          <div className="sightings-posted">
+            MAKE SIGHTINGS SHOW UP HERE WHEN SUBMITTED
+          </div>
         </div>
-
+      </section>
     </div> 
   );
 }

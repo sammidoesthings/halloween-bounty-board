@@ -2,15 +2,20 @@ import styled from 'styled-components'
 
 const Card = styled.div` 
     border: solid 2px black;
-    width: 50vh;
-    height: 40vh;
-    margin: 2vh;
+    width: 27vh;
+    height: 22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1.25vh;
+    padding: 0.25rem;
 `;
 
 const Photo = styled.img`
-    width: 50vh;
-    height: 20vh;
     border: red solid 3px;
+    width: 26vh;
+    height: 15vh;
 `;
 
 
