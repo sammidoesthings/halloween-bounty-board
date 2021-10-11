@@ -1,6 +1,6 @@
 import './App.css';
-import monsters from './components/monsters';
-import { Photo, Card } from './styles'
+import { monsters, topBounties} from './components/monsters';
+import { Photo, Card, BountyCard, BountyPhoto } from './styles'
 
 
 let monsterCards = monsters.map((monster) => {
@@ -15,13 +15,23 @@ let monsterCards = monsters.map((monster) => {
       <div>
         {monster.name} | {monster.bounty}
       </div>
-    
-      {/* <div>
-        {monster.type}. {monster.weakness}
-      </div> */}
 
     </Card>
   </div> /*master Div*/
+  )
+})
+
+let topBountyCards = topBounties.map((bounty) => {
+  // console.log(bounty.name)
+  return (
+    <div className="masterDiv">
+      <BountyCard>
+      <BountyPhoto src={`${bounty.image}`} alt="bounty profile"/>
+        {bounty.name}
+        {bounty.bounty}
+        {bounty.weakness}
+      </BountyCard>
+    </div>
   )
 })
 
@@ -45,7 +55,8 @@ function App() {
         <div className="sightings-container">
           <div className="sightings-app">
             <h2>TOP BOUNTY!</h2>
-            <p>HAVE YOU SEEN THIS MONSTER?</p>
+            <p>HAVE YOU SEEN THESE MONSTERS?</p>
+            {topBountyCards}
             <p>Submission Form</p>
           </div>
 

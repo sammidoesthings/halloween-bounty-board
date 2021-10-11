@@ -18,7 +18,18 @@ const Photo = styled.img`
     height: 15vh;
 `;
 
+const BountyCard = styled.div` 
+    border: solid green 3px;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+`;
+
+const BountyPhoto = styled.img`
+    border: red solid 3px;
+    height: 10rem;
+`;
 
 
 
-export { Photo, Card };
+export { Photo, Card, BountyCard, BountyPhoto };

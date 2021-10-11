@@ -17,7 +17,6 @@ body {
     border: orange solid 3px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
 }
 
 .job-listings, .sightings-container {
@@ -40,3 +39,7 @@ body {
     flex-direction: column;
     width: 100%;
 }
+
+/* .sightings-app {
+    width: 100%;
+} */
