@@ -1,6 +1,6 @@
 import './App.css';
 import { monsters, topBounties} from './components/monsters';
-import { Photo, Card, BountyCard, BountyPhoto, TopBountyTitle, SubTitle } from './styles'
+import { Photo, Card, BountyCard, BountyPhoto, TopBountyTitle, SubTitle, Button } from './styles'
 
 
 let monsterCards = monsters.map((monster) => {
@@ -61,7 +61,9 @@ function App() {
           </div>
 
           <div className="sightings">
-          <button>Submit a Sighting</button>
+            <Button>
+              <SubTitle>Submit a Sighting</SubTitle>
+            </Button>
           </div>
         </div>
       </section>
