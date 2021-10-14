@@ -11,8 +11,9 @@ const Card = styled.div`
     flex-direction: column;
     margin: 1.5vh;
     padding: 0.5rem;
-    background-color: rgb(153, 102, 0, 0.6);
+    background-color: rgb(255, 117, 24, 0.6);
     text-align: center;
+    box-shadow: 4px 4px #8d5013
 `;
 
 const Photo = styled.img`
@@ -30,8 +31,8 @@ const BountyCard = styled.div`
     width: 100%;
     display: flex;
     line-height: 1.25rem;
-    background-color: rgb(153, 102, 0, 0.6);
-
+    background-color: rgb(255, 117, 24, 0.6);
+    box-shadow: 4px 4px #8d5013
 `;
 
 const BountyPhoto = styled.img`
@@ -50,15 +51,16 @@ const SubTitle = styled.p`
     font-size: x-large;
     line-height: 0;
     color: #1a0d00;
-    text-shadow: 1px 1px #4d2600;
+    text-shadow: 0.5px 0.5px #8d5013;
 `;
 
 const Button = styled.button` 
     height: 4rem;
-    background-color: rgb(153, 102, 0, 0.6);
+    background-color: rgb(255, 117, 24, 0.6);
     border: 3px black solid;
     border-radius: 4px;
     margin-top: 2rem;
+    box-shadow: 4px 4px #8d5013
 `;
 
 
