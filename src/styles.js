@@ -3,20 +3,21 @@ import styled from 'styled-components'
 const Card = styled.div` 
     border: solid 3px black;
     border-radius: 4px;
-    width: 27vh;
+    width: 20vh;
     height: 22vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 1.25vh;
-    padding: 0.25rem;
+    margin: 1.5vh;
+    padding: 0.5rem;
     background-color: rgb(153, 102, 0, 0.6);
+    text-align: center;
 `;
 
 const Photo = styled.img`
-    /* border: red solid 3px; */
-    width: 26vh;
+    border: black solid 2px;
+    width: 20vh;
     height: 15vh;
 `;
 

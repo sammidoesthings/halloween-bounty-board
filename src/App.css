@@ -3,7 +3,7 @@
 h1 {
     /* border: red solid 3px; */
     font-family: 'ZCOOL KuaiLe', sans-serif;
-    font-size: 7rem;
+    font-size: 5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.75rem;
     color: #1a0d00;
@@ -11,9 +11,12 @@ h1 {
 }
 
 body {
-    font-family: 'Architects Daughter', sans-serif;
-    letter-spacing: 0.05rem;
+    font-family: sans-serif;
     background-image: url("https://static.vecteezy.com/system/resources/thumbnails/002/193/057/small/wood-texture-background-free-vector.jpg");
+}
+
+.bounty-text {
+    font-weight: 700;
 }
 
 .section {
@@ -24,7 +27,7 @@ body {
 
 .job-listings, .sightings-container {
     /* border: green solid 3px; */
-    width: 48%;
+    width: 45%;
     display: flex;
     align-content: center;
     flex-wrap: wrap;

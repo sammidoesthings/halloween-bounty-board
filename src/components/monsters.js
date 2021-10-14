@@ -21,7 +21,7 @@ const monsters = [
         image: "https://images.unsplash.com/photo-1475007303595-c1bc7ad05904?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTB8WV92U3hTeFpGTFV8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
     },
     {
-        name: "Golem of Gatlin",
+        name: "Gatlin Golem",
         type: "golem/creation",
         info: "Golems are afraid of the item that breaks down the material they are created from. Gatlin is a mud golem, so can easily be destroyed with a high-pressure water stream.",
         bounty: "$1389",
@@ -61,7 +61,7 @@ const topBounties = [
     {
         name: "La Calavera Catrina",
         type: "ghoul",
-        info: "Believed to be the original inspiration for Mexican illustrator Jose Posada's 'Dapper Skeleton' artwork and modern day 'Sugar Skull' designs. La Calavera has hinted that her death was at the hands of Posada.",
+        info: "Believed to be the inspiration for Mexican illustrator Jose Posada's 'Dapper Skeleton' artwork and modern day 'Sugar Skull' designs. La Calavera has hinted that her death was at the hands of Posada, and roams the forests near Chapultepec Castle.",
         bounty: "$505050",
         image: "https://images.unsplash.com/photo-1617296539647-68bd124fdfe9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=376&q=80"
     }, 

@@ -12,8 +12,12 @@ let monsterCards = monsters.map((monster) => {
         <Photo src={`${monster.image}`} alt="monster profile"/>
       </div>
 
+      <div className="bounty-text">
+        {monster.bounty}
+      </div>
+
       <div>
-        {monster.name} | {monster.bounty}
+        {monster.name}
       </div>
 
     </Card>
@@ -30,7 +34,8 @@ let topBountyCards = topBounties.map((bounty) => {
           <BountyPhoto src={`${bounty.image}`} alt="bounty profile"/>
         </div>
         <div className="bounty-info">
-          <h2>{bounty.bounty} | {bounty.name}</h2>
+          <h2>{bounty.bounty}</h2>
+          <h2>{bounty.name}</h2>
           <p>{bounty.info}</p>
         </div>
       </BountyCard>
