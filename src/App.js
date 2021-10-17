@@ -1,9 +1,12 @@
 import './App.css';
 import { TopBountyTitle, SubTitle, Button } from './styles'
-import { Route, Link } from 'react-router-dom';
 import { monsterCards, topBountyCards } from './Cards';
+import SightingForm from './SightingForm';
+import SightingPopUp from './components/SightingPopUp';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import schema from './ValidationSchema';
+import * as yup from 'yup';
 
 
 const initialFormValues = {
@@ -49,6 +52,21 @@ const postSighting = () => {
       })
 }
 
+const validate = (name, value) => {
+  yup.reach(schema, name)
+    .validate(value)
+    .then(() => setFormErrors({ ...formErrors, [name]: '' }))
+    .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0] }))
+}
+
+const inputChange = (name, value) => {
+  validate(name, value);
+  setFormValues({
+    ...formValues,
+    [name]: value
+  })
+}
+
 const formSubmit = () => {
   const newSighting = {
     name: formValues.name,
@@ -78,15 +96,23 @@ const formSubmit = () => {
             {topBountyCards}
           </div>
 
-      {/* <Route> */}
-        {/* <Link exact path to="/sightings"> */}
+
           <div className="sightings">
             <Button>
               <SubTitle>Submit a Sighting</SubTitle>
             </Button>
           </div>
-        {/* </Link> */}
-      {/* </Route> */}
+
+
+      <SightingForm
+        values={formValues}
+        change={inputChange}
+        submit={formSubmit}
+        disabled={disabled}
+        errors={formErrors}
+      />
+      
+      <SightingPopUp/>
 
         </div>
       </section>

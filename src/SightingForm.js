@@ -1,6 +1,6 @@
 import react from 'react';
 
-export default function SightingForm(props) {
+function SightingForm(props) {
 
     const {
         values,
@@ -107,3 +107,6 @@ export default function SightingForm(props) {
             // {/* // FUNCTION ENDS BELOW HERE */}
     )
 }
+
+
+export default SightingForm;
