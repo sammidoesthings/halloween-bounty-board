@@ -44,7 +44,7 @@ const TopBountyTitle = styled.h2`
     font-size: 3rem;
     line-height: 0;
     color: #1a0d00;
-    text-shadow: 3px 3px #4d2600;
+    text-shadow: 1.5px 1.5px #4d2600;
 `;
 
 const SubTitle = styled.p`

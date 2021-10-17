@@ -1,52 +1,65 @@
 import './App.css';
-import { monsters, topBounties} from './components/monsters';
-import { Photo, Card, BountyCard, BountyPhoto, TopBountyTitle, SubTitle, Button } from './styles'
+import { TopBountyTitle, SubTitle, Button } from './styles'
+import { Route, Link } from 'react-router-dom';
+import { monsterCards, topBountyCards } from './Cards';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 
-let monsterCards = monsters.map((monster) => {
-  // console.log(monster.name)
-  return (
-  <div className="masterDiv">
-    <Card>
-      <div className="imageDiv">
-        <Photo src={`${monster.image}`} alt="monster profile"/>
-      </div>
+const initialFormValues = {
+  name: '',
+  phone: '',
+  email: '',
+  address: '',
+  extraInfo: '',
+}
 
-      <div className="bounty-text">
-        {monster.bounty}
-      </div>
+const initialFormErrors = {
+  name: '',
+  phone: '',
+  email: '',
+  address: '',
+  extraInfo: '',
+}
 
-      <div>
-        {monster.name}
-      </div>
+const initialSightings = []; //I don't know if we need this since we aren't posting the info anywhere?
+const initialDisabled = true; //this is for our report-button, makes input required before submitting
 
-    </Card>
-  </div> /*master Div*/
-  )
-})
-
-let topBountyCards = topBounties.map((bounty) => {
-  // console.log(bounty.name)
-  return (
-    <div className="masterDiv">
-      <BountyCard>
-        <div>
-          <BountyPhoto src={`${bounty.image}`} alt="bounty profile"/>
-        </div>
-        <div className="bounty-info">
-          <h2>{bounty.bounty}</h2>
-          <h2>{bounty.name}</h2>
-          <p>{bounty.info}</p>
-        </div>
-      </BountyCard>
-    </div>
-  )
-})
 
 
 function App() {
 
 //useEffect + useState would be here
+
+const [sighting, addSighting] = useState(initialSightings);
+const [formValues, setFormValues] = useState(initialFormValues);
+const [formErrors, setFormErrors] = useState(initialFormErrors);
+const [disabled, setDisabled] = useState(initialDisabled);
+
+//IDK IF THIS API WORKS??? BUT I THINK IT DOES FOR NOW??
+
+const postSighting = () => {
+  axios.post('https://reqres.in/api/sightings')
+      .then(res => {
+        addSighting([res.data, ...sighting])
+      }).catch(err => {
+        console.error(err);
+      }).finally(() => {
+        setFormValues(initialFormValues);
+      })
+}
+
+const formSubmit = () => {
+  const newSighting = {
+    name: formValues.name,
+    size: formValues.phone,
+    topping1: formValues.email,
+    topping2: formValues.address,
+    topping3: formValues.extraInfo,
+  }
+  postSighting(newSighting);
+}
+
 
   return (
     <div className="App">
@@ -65,11 +78,16 @@ function App() {
             {topBountyCards}
           </div>
 
+      {/* <Route> */}
+        {/* <Link exact path to="/sightings"> */}
           <div className="sightings">
             <Button>
               <SubTitle>Submit a Sighting</SubTitle>
             </Button>
           </div>
+        {/* </Link> */}
+      {/* </Route> */}
+
         </div>
       </section>
     </div> 
