@@ -69,4 +69,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-This is going to be a job board for monster hunters!
+This is going to be a job board for monster hunters! It's such a cool project and I've learned so much doing it. I need to add the form still, but we are making progress!
